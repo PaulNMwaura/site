@@ -1,0 +1,15 @@
+.imageContainer {
+    position: relative;
+    top: 100px;
+    width: 375px;
+    height: 443px; /* Adjust height as needed */
+    max-width: 800px; /* Optional max width */
+    margin: left;
+}
+  
+/* Optional: Adjust height on smaller screens */
+@media (max-width: 768px) {
+    .imageContainer {
+      height: 443px; /* Shrinks on smaller screens */
+    }
+}
