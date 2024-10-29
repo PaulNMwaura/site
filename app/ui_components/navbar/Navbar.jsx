@@ -21,7 +21,7 @@ const Navbar = () => {
             </button>
         </div>
         <div className="px-4">
-            <a className="px-4 justify-items-start btn btn-xs bg-orange-500 hover:bg-orange-300 rounded-2xl" href="../users">Gallery</a> 
+            <a className="px-4 justify-items-start btn btn-xs bg-orange-500 hover:bg-orange-300 rounded-2xl text-center" href="../users">Gallery</a> 
         </div>
         <div className="flex-1">
             <div className="flex-1 justify-items-center mr-14">

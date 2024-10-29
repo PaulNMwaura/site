@@ -11,7 +11,7 @@ export default function Home() {
       <Navbar />
       {/* <h1>Hello World</h1> */}
       <div className={styles.imageContainer}>
-        <Image src="/Template.jpg" alt="Example Images" layout="fill" objectFit="cover" />
+        <Image src="/Template.jpg" alt="Example Images" fill style={{objectFit:"cover"}} />
       </div>
       {/* <ProductCard /> */}
     </div>

@@ -20,7 +20,7 @@ const Searchbar = () => {
   return (
     <form className=' flex justify-center w-[300px] relative'>
        <div className="relative"> {/* Search Icon */}
-            <input type="search" placeholder='search' className='outline w-[600px] p-4 rounded-full bg-white text-black' onChange={(e) => handleSearch(e)}/>
+            <input type="search" placeholder='search' className='text-center w-[600px] p-4 rounded-full bg-white text-black hover:outline outline-1' onChange={(e) => handleSearch(e)}/>
             <button className='absolute right-1 top-1/2 -translate-y-1/2 p-4 bg-orange-500 rounded-full'>
                 <AiOutlineSearch />
             </button>
