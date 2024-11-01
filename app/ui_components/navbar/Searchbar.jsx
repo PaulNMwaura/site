@@ -2,8 +2,8 @@
 
 import React, { useState } from 'react'
 import { AiOutlineSearch } from 'react-icons/ai';
-import { words } from '@/app/lib/data';
-import MediaQuery from "react-responsive";
+// import { words } from 'app/lib/data';
+// import MediaQuery from "react-responsive";
 
 const Searchbar = () => {
 
