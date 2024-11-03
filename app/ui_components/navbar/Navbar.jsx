@@ -14,10 +14,10 @@ const Navbar = () => {
       <div className="navbar bg-base-100">
         {/* Menu button for toggling sidebar */}
         <div>
-          <button
-            onClick={toggleSidebar}
-            className="btn btn-square bg-gradient-to-r from-purple-500 to-orange-500 rounded-xl"
-          >
+        <button
+          onClick={toggleSidebar}
+          className="btn btn-square bg-gradient-to-r from-purple-500 to-orange-500 rounded-xl z-20"
+        >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -35,18 +35,20 @@ const Navbar = () => {
         </div>
 
         {/* Center link */}
-        <div className="px-4">
+        {/* <div className="px-4">
           <a
-            className="px-4 justify-items-start btn btn-xs bg-orange-500 hover:bg-orange-300 rounded-2xl text-center"
+            className="px-4 btn btn-xs bg-orange-500 hover:bg-orange-300 rounded-2xl text-center"
             href="../users"
           >
             Gallery
           </a>
-        </div>
+        </div> */}
 
         {/* Search bar */}
-        <div className="flex-1 hidden md:flex justify-center">
-          <Searchbar />
+        <div className="-ml-36 sm:-ml-10 md:mx-auto flex-1 flex justify-center"> 
+          <div className="w-16 sm:w-24 md:w-32 lg:w-48 xl:w-64 mx-2"> {/* Adjusted width */}
+            <Searchbar />
+          </div>
         </div>
 
         {/* Optional additional button */}

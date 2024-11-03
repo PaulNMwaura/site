@@ -7,7 +7,7 @@ import { AiOutlineSearch } from 'react-icons/ai';
 
 const Searchbar = () => {
 
-    const [activeSearch, setActiveSearch] = useState([])
+    const [setActiveSearch] = useState([])
 
     const handleSearch = (e) => {
         if(e.target.value == '') {
@@ -18,13 +18,19 @@ const Searchbar = () => {
     }
 
   return (
-    <form className=' flex justify-center w-[300px] relative'>
-       <div className="relative"> {/* Search Icon */}
-            <input type="search" placeholder='search' className='text-center w-[600px] p-4 rounded-full bg-white text-black hover:outline outline-1' onChange={(e) => handleSearch(e)}/>
-            <button className='absolute right-1 top-1/2 -translate-y-1/2 p-4 bg-orange-500 rounded-full'>
+    <form className='flex justify-center w-full max-w-md mx-auto relative'>
+        <div className="flex items-center w-full"> {/* Use flex to align items */}
+            <input 
+            type="search" 
+            placeholder='Search' 
+            className='text-center min-w-48 ml-2 sm:min-w-60 sm:-ml-10 md:min-w-96 md:-ml-28 lg:min-w-[600px] lg:-ml-48 p-2 rounded-full bg-white text-black hover:outline outline-1 flex-grow' // Added flex-grow
+            onChange={(e) => handleSearch(e)} 
+            autoComplete="off"
+            />
+            <button className='-ml-9 p-1.5 bg-orange-500 rounded-full'> {/* Added margin left to separate the button from the input */}
                 <AiOutlineSearch />
             </button>
-       </div>
+        </div>
         {
             // activeSearch.length > 0 && (
             //     <div className="absolute top-20 p-4 bg-gray-400 text-black w-full rounded-xl -translate-x-1/2 flex flex-col gap-2">
