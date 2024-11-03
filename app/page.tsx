@@ -1,8 +1,18 @@
 'use client';
 
 import Image from "next/image";
-// import ProductCard from "./ui_components/ProductCard/ProductCard";
 import Navbar from "./ui_components/navbar/Navbar";
+import { Roboto, Bebas_Neue } from 'next/font/google';
+
+const roboto = Roboto({
+  weight: '400', // Define weights, styles
+  subsets: ['latin'],
+});
+
+const bebas = Bebas_Neue({
+  weight: '400', // Define weights, styles
+  subsets: ['latin'],
+});
 
 
 export default function Home() {
@@ -10,32 +20,52 @@ export default function Home() {
   return (
     <div>
       <Navbar />
-      <div className="min-h-[900px] lg:min-h-[500px] flex flex-wrap bg-slate-500">
-        <div className="relative w-full lg:w-1/2 min-h-[500px] max-h-[500px] bg-blue-600 flex items-center justify-center text-center text-white">
-          <div className="absolute w-[300px] min-h-[400px] max-h-[400px] lg:mr-[30%] bg-white flex flex-wrap items-center justify-between p-1 gap-1 rounded-3xl">
-            <Image src="/Style1.jpg" alt="" layout="responsive" width={95} height={95} quality={90} className="basis-1/2 max-w-[48%] rounded-3xl" />
-            <Image src="/Cornrows.jpg" alt="" layout="responsive" width={95} height={95} quality={90} className="basis-1/2 max-w-[48%] rounded-3xl" />
-            <Image src="/Style2.jpg" alt="" layout="responsive" width={95} height={95} quality={90} className="basis-1/2 max-w-[48%] rounded-3xl" />
-            <Image src="/fade.jpg" alt="" layout="responsive" width={95} height={95} quality={90} className="basis-1/2 max-w-[48%] rounded-3xl" />
+      <div className="w-full min-h-fit lg:min-h-fit flex flex-wrap bg-white">
+        <div className="relative w-full lg:w-1/2 min-h-[500px] max-h-[500px] bg-white flex lg:items-center justify-center text-center text-white">
+          <div className="relative w-[350px] max-h-[500px] bg-white grid grid-cols-2 gap-2 p-2 rounded-3xl">
+            <Image src="/Style1.jpg" alt="Style 1" width={100} height={100} layout="responsive" className="w-full h-full object-cover rounded-3xl" />
+            <Image src="/Cornrows.jpg" alt="Cornrows" width={100} height={100} layout="responsive" className="w-full h-full object-cover rounded-3xl" />
+            <Image src="/Style2.jpg" alt="Style 2" width={100} height={100} layout="responsive" className="w-full h-full object-cover rounded-3xl" />
+            <Image src="/fade.jpg" alt="Fade" width={100} height={100} layout="responsive" className="w-full h-full object-cover rounded-3xl" />
           </div>
         </div>
-        <div className="relative w-full lg:w-1/2 min-h-[400px] bg-red-600 flex items-center justify-center text-center text-white">
-          <p>
-          Lorem ipsum mollis netus aliquam nunc at litora bibendum eleifend torquent augue, morbi maecenas consectetur donec nam tristique id volutpat rutrum
-          mollis venenatis cras, vivamus tortor litora pulvinar laoreet lacinia porta per eleifend mauris. Bibendum rutrum pharetra eget mattis et ipsum pellentesque 
-          tortor inceptos, mattis cubilia fermentum tellus amet inceptos pretium. Massa nunc mi ornare ac pulvinar sed aliquam accumsan pellentesque massa sed amet ut 
-          porta elementum, ut in non varius amet class cubilia feugiat leo metus ut leo tortor enim. Neque erat nullam fames pulvinar class elit sagittis sed, et praesent
-          tempor ultricies per metus ut nulla fames, feugiat non nullam tristique aliquam interdum mi. Habitasse taciti in venenatis at vestibulum elit eu aliquam integer, 
-          fringilla posuere id faucibus aliquet rhoncus est felis bibendum inceptos, vestibulum vivamus tempor etiam cras justo felis dapibus. Lorem bibendum ultrices morbi 
-          est sociosqu ante gravida a quis, accumsan sed proin rutrum phasellus fames litora sapien, curabitur dui ad curae et placerat auctor habitant.
+        <div className="relative w-full lg:w-1/2 min-h-[400px] bg-white flex items-center justify-center flex-col text-center text-white">
+          <p className="font-bold text-5xl text-gray-500 text-pretty">
+            WANT TO CHANGE UP YOUR LOOK?
+          </p>
+          <p className="font-sans text-3xl text-gray-500">
+            WE GOT YOU COVERED
           </p>
         </div>
       </div>
-      <div className="relative min-w-full min-h-screen bg-slate-700 place-content-center text-center text-white">
-        A NEW SECTION
+      <div className="w-full h-fit flex place-content-center">
+        <div className="relative w-3/4 min-h-96 bg-slate-900 place-content-center text-center rounded-3xl">
+          <p className="font-bold text-3xl text-white">
+            MAKING IT EASIER TO: <br /> <br />
+            FIND A STYLISTS NEAR YOU <br />
+            VIEW PREVIOUS WORK DONE BY THEM <br />
+            CONTACT THEM TO SEE IF THEY CAN SERVICE YOUR BEAUTY NEEDS <br />
+          </p>
+        </div>
       </div>
-      <div className="relative min-w-full min-h-screen bg-slate-900 place-content-center text-center text-white">
-        A NEW SECTION 2
+      <div className="relative min-w-full min-h-fit flex flex-col items-center justify-center bg-white"> {/* {height/width fit content is very powerful} */}
+        <div className="w-fit h-fit font-bold text-3xl text-purple-500 text-center">
+          WHICH SERVICE ARE YOU LOOKING FOR?
+        </div>
+        <div className="w-[90%] h-1/2 bg-white justify-items-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20 p-10">
+          <div className="w-[80%] md:w-56 h-72 bg-red-500 flex items-center justify-center text-center font-bold text-white rounded-3xl">
+            <p> BARBERS</p>
+          </div>
+          <div className="w-[80%] md:w-56 h-72 bg-red-500 flex items-center justify-center text-center font-bold text-white rounded-3xl">
+            <p>HAIR STYLERS</p>
+          </div>
+          <div className="w-[80%] md:w-56 h-72 bg-red-500 flex items-center justify-center text-center font-bold text-white rounded-3xl">
+            <p>BRAIDING</p>
+          </div>
+          <div className="w-[80%] md:w-56 h-72 bg-red-500 flex items-center justify-center text-center font-bold text-white rounded-3xl">
+            <p>OTHER</p>
+          </div>
+        </div>
       </div>
       <div className="relative min-w-full min-h-screen bg-black place-content-center text-center text-white">
         A NEW SECTION 3

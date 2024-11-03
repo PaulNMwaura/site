@@ -19,11 +19,11 @@ const Searchbar = () => {
 
   return (
     <form className='flex justify-center w-full max-w-md mx-auto relative'>
-        <div className="flex items-center w-full"> {/* Use flex to align items */}
+        <div className="flex place-items-center w-full"> {/* Use flex to align items */}
             <input 
             type="search" 
             placeholder='Search' 
-            className='text-center min-w-48 ml-2 sm:min-w-60 sm:-ml-10 md:min-w-96 md:-ml-28 lg:min-w-[600px] lg:-ml-48 p-2 rounded-full bg-white text-black hover:outline outline-1 flex-grow' // Added flex-grow
+            className='text-center min-w-48 ml-2 sm:min-w-60 sm:-ml-10 md:min-w-96 md:-ml-28 lg:min-w-[600px] lg:-ml-48 p-2 rounded-full bg-white text-black outline outline-purple-500 outline-1' // Added flex-grow
             onChange={(e) => handleSearch(e)} 
             autoComplete="off"
             />
