@@ -85,7 +85,7 @@ const Navbar = () => {
         </div>
         {/* Add your sidebar content here */}
         <div className="mt-20 p-4">
-          <a href="./">
+          <a href="./Homepage">
             <u>HOME</u>
           </a>
         </div>
