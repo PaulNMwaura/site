@@ -5,12 +5,12 @@ import Navbar from "../ui_components/navbar/Navbar";
 import { Roboto, Bebas_Neue } from 'next/font/google';
 
 const roboto = Roboto({
-  weight: '400', // Define weights, styles
+  weight: '400',
   subsets: ['latin'],
 });
 
 const bebas = Bebas_Neue({
-  weight: '400', // Define weights, styles
+  weight: '400',
   subsets: ['latin'],
 });
 
@@ -37,37 +37,48 @@ const Home = () => {
             </div>
         </div>
         <div className="w-full h-fit flex place-content-center">
-            <div className="relative w-3/4 min-h-96 bg-slate-900 place-content-center text-center rounded-3xl">
-            <p className="font-bold text-3xl bg-gradient-to-l from-purple-500 to-orange-600 text-transparent bg-clip-text">
-                MAKING IT EASIER TO: <br /> <br />
-                FIND A STYLISTS NEAR YOU <br />
-                VIEW PREVIOUS WORK DONE BY THEM <br />
-                CONTACT THEM TO SEE IF THEY CAN SERVICE YOUR BEAUTY NEEDS <br />
-            </p>
+            <div className="relative w-3/4 min-h-96 bg-slate-900 place-content-center text-center rounded-3xl transform hover:scale-[1.10] transition-transform duration-300 z-10">
+                <p className="p-10 font-bold text-3xl bg-gradient-to-l from-purple-500 to-orange-600 text-transparent bg-clip-text">
+                    MAKING IT EASIER TO: <br /> <br />
+                    FIND A STYLISTS NEAR YOU <br />
+                    VIEW PREVIOUS WORK DONE BY THEM <br />
+                    CONTACT THEM TO SEE IF THEY CAN SERVICE YOUR BEAUTY NEEDS <br />
+                </p>
             </div>
         </div>
         <div className="relative min-w-full min-h-fit flex flex-col items-center justify-center bg-white"> {/* {height/width fit content is very powerful} */}
-        
-            <div className="pt-20 w-fit h-fit font-bold text-6xl text-purple-500 text-center">
+            <div className="pt-20 w-fit h-fit font-bold text-6xl text-black text-center">
             WHICH SERVICE ARE YOU LOOKING FOR?
             </div>
             <div className="w-[90%] h-1/2 bg-white justify-items-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20 p-10">
-            <a href="." className="w-[80%] md:w-56 h-72 bg-red-500 flex flex-col place-content-end text-center font-bold text-white rounded-3xl">
-                <p>BARBERS</p>
-                <div className="w-full h-5/6 bg-emerald-700 rounded-ss-full">
-
-                </div>
-                
-            </a>
-            <div className="w-[80%] md:w-56 h-72 bg-red-500 flex items-center justify-center text-center font-bold text-white rounded-3xl">
-                <p>HAIR STYLERS</p>
-            </div>
-            <div className="w-[80%] md:w-56 h-72 bg-red-500 flex items-center justify-center text-center font-bold text-white rounded-3xl">
-                <p>BRAIDERS</p>
-            </div>
-            <div className="w-[80%] md:w-56 h-72 bg-red-500 flex items-center justify-center text-center font-bold text-white rounded-3xl">
-                <p>OTHER</p>
-            </div>
+                <a href="./Home" className="w-[80%] md:w-56 h-72 bg-red-500 flex flex-col place-content-end text-center font-bold text-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-[1.05] transition-transform duration-300">
+                    <p className='p-5'>BARBERS</p>
+                    <div className='w-full h-full'>
+                        <div className="w-full h-full bg-teal-500 rounded-ss-full">
+                        </div>
+                    </div>
+                </a>
+                <a href="./Home" className="w-[80%] md:w-56 h-72 bg-red-500 flex flex-col place-content-end text-center font-bold text-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-[1.05] transition-transform duration-300">
+                    <p className='p-5'>HAIR STYLERS</p>
+                    <div className='w-full h-full'>
+                        <div className="w-full h-full bg-teal-500 rounded-se-full">
+                        </div>
+                    </div>
+                </a>
+                <a href="./Home" className="w-[80%] md:w-56 h-72 bg-red-500 flex flex-col place-content-end text-center font-bold text-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-[1.05] transition-transform duration-300">
+                    <p className='p-5'>BRAIDERS</p>
+                    <div className='w-full h-full'>
+                        <div className="w-full h-full bg-teal-500 rounded-es-full">
+                        </div>
+                    </div>
+                </a>
+                <a href="./Home" className="w-[80%] md:w-56 h-72 bg-red-500 flex flex-col place-content-end text-center font-bold text-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-[1.05] transition-transform duration-300">
+                    <p className='p-5'>OTHER</p>
+                    <div className='w-full h-full'>
+                        <div className="w-full h-full bg-teal-500 rounded-ee-full">
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
         <div className="relative min-w-full min-h-fit bg-stone-500 flex place-content-center text-center text-white rounded-3xl">

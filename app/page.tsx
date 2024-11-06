@@ -1,14 +1,14 @@
 'use client';
 
 import React from "react";
-// import Homepage from "./Login/Home/page";
+import LoginPage from "./login/LoginPage";
 // import Navbar from "./ui_components/navbar/Navbar";
 
-export default function Login() {
+export default function app() {
 
   return (
     <div>
-      Login Page
+      <LoginPage />
     </div>
   );
 }
