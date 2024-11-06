@@ -2,17 +2,6 @@
 import React from 'react';
 import Image from "next/image";
 import Navbar from "../ui_components/navbar/Navbar";
-import { Roboto, Bebas_Neue } from 'next/font/google';
-
-const roboto = Roboto({
-  weight: '400',
-  subsets: ['latin'],
-});
-
-const bebas = Bebas_Neue({
-  weight: '400',
-  subsets: ['latin'],
-});
 
 const Home = () => {
   return (
