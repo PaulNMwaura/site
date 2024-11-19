@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import Image from "next/image";
-import Navbar from "../ui_components/navbar/Navbar";
+import Navbar from "../components/navbar/Navbar";
 
 const Home = () => {
   return (

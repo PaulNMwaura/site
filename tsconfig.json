@@ -22,6 +22,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/Navbar.jsx", "app/ui_components/searchbar/Searchbar.jsx", "app/ui_components/navbar/Searchbar.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/Navbar.jsx", "app/components/searchbar/Searchbar.jsx", "app/components/navbar/Searchbar.jsx", "app/pages/api/register.js", "app/login/LoginPage.js"],
   "exclude": ["node_modules"]
 }

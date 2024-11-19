@@ -1,6 +1,10 @@
+'use client';
+
 import React, { useState } from 'react';
 import Searchbar from './Searchbar';
 import { AiFillCloseSquare } from "react-icons/ai";
+import { FaSignOutAlt } from "react-icons/fa";
+import { signOut } from 'next-auth/react';
 
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -53,20 +57,8 @@ const Navbar = () => {
 
         {/* Optional additional button */}
         <div className="flex-none">
-          <button className="btn btn-square btn-ghost">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              className="inline-block h-5 w-5 stroke-current"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"
-              ></path>
-            </svg>
+          <button onClick={() => signOut()} className="btn btn-square btn-ghost">
+            <FaSignOutAlt size={25} />
           </button>
         </div>
       </div>
