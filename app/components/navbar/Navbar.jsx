@@ -101,6 +101,14 @@ const Navbar = () => {
               <u>INFORMATION</u>
           </a>
         </div>
+        <div className="absolute bottom-10 flex flex-row items-center">
+          <button onClick={() => signOut()} className="btn btn-square btn-ghost">
+            <FaSignOutAlt size={25} />
+          </button>
+          <button onClick={() => signOut()} >
+            Signout
+          </button>
+        </div>
       </div>
 
       {/* Overlay for when sidebar is open */}

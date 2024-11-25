@@ -22,6 +22,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/Navbar.jsx", "app/components/searchbar/Searchbar.jsx", "app/components/navbar/Searchbar.jsx", "app/pages/api/register.js", "app/login/LoginPage.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/Navbar.jsx", "app/components/searchbar/Searchbar.jsx", "app/components/navbar/Searchbar.jsx", "app/pages/api/register.js", "app/login/LoginPage.js", "app/components/RegisterForm.jsx", "app/Home/page.jsx", "app/page.jsx", "app/register/page.jsx", "app/components/LoginForm.js", "app/api/register/route.js", "app/lib/mongodb.js", "app/lib/mongodb.js"],
   "exclude": ["node_modules"]
 }

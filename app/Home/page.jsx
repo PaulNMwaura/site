@@ -40,21 +40,21 @@ const Home = () => {
             WHICH SERVICE ARE YOU LOOKING FOR?
             </div>
             <div className="w-[90%] h-1/2 bg-white justify-items-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20 p-10">
-                <a href="./Home" className="w-[80%] md:w-56 h-72 bg-red-500 flex flex-col place-content-end text-center font-bold text-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-[1.05] transition-transform duration-300">
+                <a href="./../BrowseBarbers" className="w-[80%] md:w-56 h-72 bg-red-500 flex flex-col place-content-end text-center font-bold text-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-[1.05] transition-transform duration-300">
                     <p className='p-5'>BARBERS</p>
                     <div className='w-full h-full'>
                         <div className="w-full h-full bg-teal-500 rounded-ss-full">
                         </div>
                     </div>
                 </a>
-                <a href="./Home" className="w-[80%] md:w-56 h-72 bg-red-500 flex flex-col place-content-end text-center font-bold text-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-[1.05] transition-transform duration-300">
+                <a href="./../BrowseHairStylers" className="w-[80%] md:w-56 h-72 bg-red-500 flex flex-col place-content-end text-center font-bold text-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-[1.05] transition-transform duration-300">
                     <p className='p-5'>HAIR STYLERS</p>
                     <div className='w-full h-full'>
                         <div className="w-full h-full bg-teal-500 rounded-se-full">
                         </div>
                     </div>
                 </a>
-                <a href="./Home" className="w-[80%] md:w-56 h-72 bg-red-500 flex flex-col place-content-end text-center font-bold text-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-[1.05] transition-transform duration-300">
+                <a href="./../BrowseBraiders" className="w-[80%] md:w-56 h-72 bg-red-500 flex flex-col place-content-end text-center font-bold text-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-[1.05] transition-transform duration-300">
                     <p className='p-5'>BRAIDERS</p>
                     <div className='w-full h-full'>
                         <div className="w-full h-full bg-teal-500 rounded-es-full">
