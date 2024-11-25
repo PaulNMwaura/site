@@ -4,29 +4,30 @@ import { connectMongoDB } from "./../../../lib/mongodb";
 import User from "./../../../models/user";
 import bcrypt from "bcryptjs";
 
-export const authOptions = {
+const handler = NextAuth({
     providers: [
         CredentialsProvider({
             name: "Credentials",
             credentials: {},
 
             async authorize(credentials) {
-                const {email, password }= credentials;
+                const { email, password } = credentials;
 
                 try {
                     await connectMongoDB();
                     const user = await User.findOne({ email });
-                    // if the user does not exist in our database...
-                    if(!user) return null;
+                    // If the user does not exist in our database...
+                    if (!user) return null;
 
                     const passwordsMatch = await bcrypt.compare(password, user.password);
-                    // if user does exits, check if hash of both inputed password, and stored password, matches
-                    if(!passwordsMatch) return null;
+                    // If the hash of the input password and stored password do not match...
+                    if (!passwordsMatch) return null;
 
-                    // if user exists, return the user
+                    // If user exists, return the user
                     return user;
-                } catch (error){
+                } catch (error) {
                     console.log("Error: ", error);
+                    return null; // Return null if an error occurs
                 }
             },
         }),
@@ -38,8 +39,6 @@ export const authOptions = {
     pages: {
         signIn: "/",
     },
-};
+});
 
-const handler = NextAuth(authOptions);
-
-export {handler as GET, handler as POST};
+export { handler as GET, handler as POST };
