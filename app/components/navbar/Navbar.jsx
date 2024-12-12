@@ -3,7 +3,14 @@
 import React, { useState } from 'react';
 import Searchbar from './Searchbar';
 import { AiFillCloseSquare } from "react-icons/ai";
-import { FaSignOutAlt } from "react-icons/fa";
+import { 
+  FaSignOutAlt,
+  FaHome,
+  FaCalendarAlt,
+  FaStarHalfAlt,
+  FaHandsHelping,
+  FaInfoCircle
+ } from "react-icons/fa";
 import { signOut } from 'next-auth/react';
 
 const Navbar = () => {
@@ -65,46 +72,49 @@ const Navbar = () => {
 
       {/* Sidebar */}
       <div
-        className={`fixed inset-y-0 left-0 w-64 bg-orange-700 text-white transform' ${
+        className={`fixed overflow-auto inset-y-0 left-0 w-64 bg-orange-700 text-white transform' ${
           isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
         } transition-transform duration-300 ease-in-out z-40`}
       >
-        <div className="flex items-center justify-between p-4 border-b border-gray-600">
+        <div className="flex items-center justify-between p-4 border-b border-yellow-300">
           <h2 className="text-lg font-semibold">Menu</h2>
           <button onClick={toggleSidebar} className="text-gray-300 hover:text-white">
             <AiFillCloseSquare size={30} />
           </button>
         </div>
         {/* Add your sidebar content here */}
-        <div className="mt-20 p-4">
+        <div className="flex flex-row mt-4 gap-4">
+          <FaHome size={25}/>
           <a href="./Homepage">
-            <u>HOME</u>
+            <u>Home</u>
           </a>
         </div>
-        <div className="p-4">
+        <div className="pt-4 flex flex-row gap-4">
+          <FaCalendarAlt size={25}/>
           <a href="./">
-              <u>AVAILABILITY</u>
+              <u>Availability</u>
           </a>
         </div>
-        <div className="p-4">
+        <div className="pt-4 flex flex-row gap-4">
+          <FaStarHalfAlt size={25}/>
           <a href="./">
-              <u>RATING/REVIEWS</u>
+              <u>Rating/Reviews</u>
           </a>
         </div>
-        <div className="p-4">
+        <div className="pt-4 flex flex-row gap-4">
+          <FaHandsHelping size={25}/>
           <a href="./">
-              <u>SUPPORT</u>
+              <u>Support</u>
           </a>
         </div>
-        <div className="p-4">
+        <div className="pt-4 flex flex-row gap-4">
+          <FaInfoCircle size={25}/>
           <a href="./">
-              <u>INFORMATION</u>
+              <u>Information</u>
           </a>
         </div>
-        <div className="absolute bottom-10 flex flex-row items-center">
-          <button onClick={() => signOut()} className="btn btn-square btn-ghost">
-            <FaSignOutAlt size={25} />
-          </button>
+        <div className="pt-4 mb-0 flex flex-row items-center gap-4">
+          <FaSignOutAlt size={25} />
           <button onClick={() => signOut()} >
             Signout
           </button>

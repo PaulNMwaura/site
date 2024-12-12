@@ -4,7 +4,7 @@ import { connectMongoDB } from "./../../../lib/mongodb";
 import User from "./../../../models/user";
 import bcrypt from "bcryptjs";
 
-const handler = NextAuth({
+export const authOptions = {
     providers: [
         CredentialsProvider({
             name: "Credentials",
@@ -23,8 +23,8 @@ const handler = NextAuth({
                     // If the hash of the input password and stored password do not match...
                     if (!passwordsMatch) return null;
 
-                    // If user exists, return the user
-                    return user;
+                    // Return the user object (you can include any fields you need)
+                    return { id: user._id.toString(), email: user.email };
                 } catch (error) {
                     console.log("Error: ", error);
                     return null; // Return null if an error occurs
@@ -35,10 +35,30 @@ const handler = NextAuth({
     session: {
         strategy: "jwt",
     },
+    callbacks: {
+        async jwt({ token, user }) {
+            // If user is defined (on initial login), add userId to the token
+            if (user) {
+                token.userId = user.id; // Add userId to the token
+            }
+            return token;
+        },
+        async session({ session, token }) {
+            // Add userId to the session from the token
+            session.user = {
+                ...session.user,
+                userId: token.userId, // Attach userId to the session object
+            };
+            return session;
+        },
+    },
     secret: process.env.NEXTAUTH_SECRET,
     pages: {
-        signIn: "/",
+        signIn: "/", // Custom sign-in page
     },
-});
+};
 
+const handler = NextAuth(authOptions);
+
+export { authOptions };
 export { handler as GET, handler as POST };
