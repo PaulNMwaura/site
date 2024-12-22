@@ -22,7 +22,6 @@ export default function RegisterForm() {
     }
 
     try {
-
         const resUserExists = await fetch('api/userExists', {
             method: "POST",
             headers: {

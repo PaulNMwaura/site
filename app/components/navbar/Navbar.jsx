@@ -72,9 +72,9 @@ const Navbar = () => {
 
       {/* Sidebar */}
       <div
-        className={`fixed overflow-auto inset-y-0 left-0 w-64 bg-orange-700 text-white transform' ${
-          isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
-        } transition-transform duration-300 ease-in-out z-40`}
+      className={`fixed overflow-auto inset-y-0 left-0 w-64 bg-orange-700 text-white transform ${
+        isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
+      } transition-transform duration-300 ease-in-out z-40 flex flex-col`}
       >
         <div className="flex items-center justify-between p-4 border-b border-yellow-300">
           <h2 className="text-lg font-semibold">Menu</h2>
@@ -83,39 +83,41 @@ const Navbar = () => {
           </button>
         </div>
         {/* Add your sidebar content here */}
-        <div className="flex flex-row mt-4 gap-4">
-          <FaHome size={25}/>
-          <a href="./Homepage">
-            <u>Home</u>
-          </a>
+        <div className="pl-2 flex flex-col flex-grow">
+          <div className="flex flex-row mt-4 gap-4">
+            <FaHome size={25} />
+            <a href="./Home">
+              Home
+            </a>
+          </div>
+          <div className="pt-4 flex flex-row gap-4">
+            <FaCalendarAlt size={25} />
+            <a href="./">
+              Availability
+            </a>
+          </div>
+          <div className="pt-4 flex flex-row gap-4">
+            <FaStarHalfAlt size={25} />
+            <a href="./">
+              Rating/Reviews
+            </a>
+          </div>
+          <div className="pt-4 flex flex-row gap-4">
+            <FaHandsHelping size={25} />
+            <a href="./">
+              Support
+            </a>
+          </div>
+          <div className="pt-4 flex flex-row gap-4">
+            <FaInfoCircle size={25} />
+            <a href="./">
+              Information
+            </a>
+          </div>
         </div>
-        <div className="pt-4 flex flex-row gap-4">
-          <FaCalendarAlt size={25}/>
-          <a href="./">
-              <u>Availability</u>
-          </a>
-        </div>
-        <div className="pt-4 flex flex-row gap-4">
-          <FaStarHalfAlt size={25}/>
-          <a href="./">
-              <u>Rating/Reviews</u>
-          </a>
-        </div>
-        <div className="pt-4 flex flex-row gap-4">
-          <FaHandsHelping size={25}/>
-          <a href="./">
-              <u>Support</u>
-          </a>
-        </div>
-        <div className="pt-4 flex flex-row gap-4">
-          <FaInfoCircle size={25}/>
-          <a href="./">
-              <u>Information</u>
-          </a>
-        </div>
-        <div className="pt-4 mb-0 flex flex-row items-center gap-4">
+        <div className="pl-2 flex flex-row items-center gap-4 mt-auto mb-4">
           <FaSignOutAlt size={25} />
-          <button onClick={() => signOut()} >
+          <button onClick={() => signOut()}>
             Signout
           </button>
         </div>

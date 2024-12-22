@@ -27,6 +27,10 @@ const userSchema = new Schema ({
         type: [String],
         default: ['user'],
     },
+    location: {
+        type: String,
+        default: 'Unconfigured',
+    },
     activeAccount: {
         type: Boolean,
         default: true,
